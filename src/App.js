@@ -31,10 +31,11 @@ class App extends Component {
           },
           //credentials: "same-origin"
         });
+        console.log('String Backend: ' + jsonStringBackEnd);
         const responseFromBackEnd = await requestToBackEnd.json();
         const jsonStringBackEnd = JSON.stringify(responseFromBackEnd)
         this.setState({ backend: jsonStringBackEnd });
-        console.log('String Backend: ' + jsonStringBackEnd);
+        // console.log('String Backend: ' + jsonStringBackEnd);
 
         axios({
           method: 'get',

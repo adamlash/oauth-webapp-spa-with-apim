@@ -40,7 +40,7 @@ class App extends Component {
 
         axios({
           method: 'get',
-          url: 'https://adamlashapim.azure-api.net/adamlash/helloWorld',
+          url: 'https://adamlashapim.azure-api.net/adamlash/helloWorld.json',
           headers: {'Authorization': "Bearer " + id_token, 'Accept' : 'application/json', 'Content-Type': 'application/json'},
           cancelToken: new axios.CancelToken((token) => {
           this.cancelToken = token;
@@ -48,7 +48,7 @@ class App extends Component {
         })
         .then((res) => {
           this.cancelToken = null;
-          this.setState({ backend2: JSON.stringify(res) });
+          this.setState({ backend2: JSON.stringify(res.data) });
         })
       }
     } catch (error) {

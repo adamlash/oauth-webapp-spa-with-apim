@@ -70,7 +70,7 @@ class App extends Component {
           Values from Backend: { this.state.backend }
         </p> */}
         <p className="App-intro">
-          Values from Backend using axios: { this.state.backend2 }
+          Values from Backend using axios: { this.state.init ? this.state.backend2 : <div>loading</div> }
         </p>
       </div>
     );

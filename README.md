@@ -1,4 +1,4 @@
-# aad-oauth-spa-with-apim
+# oauth-webapp-spa-with-apim
 Azure AD authenticated with Oauth to an SPA backed by APIs from APIM. This Demo is using EasyAuth on WebApps (https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
 
 ## Goals

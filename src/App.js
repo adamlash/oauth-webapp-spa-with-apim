@@ -40,7 +40,7 @@ class App extends Component {
 
         axios({
           method: 'get',
-          url: 'https://adamlashapim.azure-api.net/adamlash/helloWorld',
+          url: 'https://jsonplaceholder.typicode.com/todos/1',
           headers: {'Authorization': "Bearer " + id_token, 'Accept' : 'application/json', 'Content-Type': 'application/json'},
           cancelToken: new axios.CancelToken((token) => {
           this.cancelToken = token;

@@ -21,22 +21,6 @@ class App extends Component {
       console.log('Token: '+ id_token);
       this.setState({ token: jsonArray[0].id_token });
       if (jsonArray !== undefined) {
-        // console.log('Array has content');
-        // const requestToBackEnd = await fetch('https://adamlashapim.azure-api.net/adamlash/helloWorld',
-        // {
-        //   method: "GET",
-        //   //body: JSON.stringify(data),
-        //   headers: {
-        //     "Authorization": "Bearer " + id_token 
-        //   },
-        //   //credentials: "same-origin"
-        // });
-        // console.log('requestToBackEnd: ' + requestToBackEnd);
-        // const responseFromBackEnd = await requestToBackEnd.json();
-        // console.log('responseFromBackEnd: ' + responseFromBackEnd);
-        // const jsonStringBackEnd = JSON.stringify(responseFromBackEnd)
-        // this.setState({ backend: jsonStringBackEnd });
-        // console.log('jsonStringBackEnd: ' + jsonStringBackEnd);
 
         axios({
           method: 'get',
@@ -66,9 +50,6 @@ class App extends Component {
         <p className="App-intro">
           Token from Azure AD: { this.state.token }
         </p>
-        {/* <p className="App-intro">
-          Values from Backend: { this.state.backend }
-        </p> */}
         <p className="App-intro">
           Values from Backend using axios: { this.state.init ? this.state.backend2 : <div>loading</div> }
         </p>

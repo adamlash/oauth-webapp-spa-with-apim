@@ -48,7 +48,7 @@ class App extends Component {
         })
         .then((res) => {
           this.cancelToken = null;
-          this.setState({ backend2: JSON.stringify(res), init:1 });
+          this.setState({ backend2: JSON.stringify(res.data), init:1 });
         })
       }
     } catch (error) {

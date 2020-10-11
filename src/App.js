@@ -17,7 +17,7 @@ class App extends Component {
       console.log('String: ' + jsonString);
       const jsonArray = JSON.parse(jsonString)
       console.log('Array: '+ jsonArray);
-      var id_token =jsonArray[0].access_token;  // or jsonArray[0].access_token
+      var access_token =jsonArray[0].access_token;  // or jsonArray[0].access_token
       console.log('Token: '+ access_token);
       this.setState({ token: jsonArray[0].access_token });
       if (jsonArray !== undefined) {
@@ -25,7 +25,7 @@ class App extends Component {
         axios({
           method: 'get',
           url: 'https://adamlashapim.azure-api.net/alnodejs/helloWorld',
-          headers: {'Authorization': "Bearer " + id_token, 'Accept' : 'application/json', 'Content-Type': 'application/json'},
+          headers: {'Authorization': "Bearer " + access_token, 'Accept' : 'application/json', 'Content-Type': 'application/json'},
           cancelToken: new axios.CancelToken((token) => {
           this.cancelToken = token;
           })

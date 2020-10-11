@@ -17,9 +17,9 @@ class App extends Component {
       console.log('String: ' + jsonString);
       const jsonArray = JSON.parse(jsonString)
       console.log('Array: '+ jsonArray);
-      var id_token =jsonArray[0].id_token;  // or jsonArray[0].access_token
-      console.log('Token: '+ id_token);
-      this.setState({ token: jsonArray[0].id_token });
+      var id_token =jsonArray[0].access_token;  // or jsonArray[0].access_token
+      console.log('Token: '+ access_token);
+      this.setState({ token: jsonArray[0].access_token });
       if (jsonArray !== undefined) {
 
         axios({
